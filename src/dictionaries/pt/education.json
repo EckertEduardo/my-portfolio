@@ -1,0 +1,30 @@
+[
+    {
+        "logo": "/education/descomplica.png",
+        "institution": "Descomplica Faculdade Digital",
+        "course": "Especialização: Engenharia de Software",
+        "date": "2023-2024",
+        "link": "https://descomplica.com.br/faculdade/",
+        "technologies": [
+            "Java",
+            "Arquitetura e Modelagem de Dados",
+            "Cloud AWS",
+            "Gestão de Projetos",
+            "Metodologias de Desenvolvimento"
+        ]
+    },
+    {
+        "logo": "/education/unisociesc.png",
+        "institution": "Unisociesc Centro Universitário",
+        "course": "Graduação: Análise e Desenvolvimento de Sistemas",
+        "date": "2021-2023",
+        "link": "https://www.unisociesc.com.br/",
+        "technologies": [
+            "Java",
+            "HTML",
+            "CSS",
+            "React",
+            "Metodologias de Desenvolvimento"
+        ]
+    }
+]

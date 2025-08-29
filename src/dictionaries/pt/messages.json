@@ -1,0 +1,66 @@
+{
+    "NavBar": {
+        "a1": "Sobre mim",
+        "a2": "Qualificações",
+        "a3": "Projetos",
+        "a4": "Habilidades",
+        "a5": "Contato"
+    },
+    "Hero": {
+        "p": "Olá, meu nome é",
+        "h2": "Eduardo Eckert Sperfeld",
+        "text": "Desenvolvedor de software dedicado, em constante evolução. Experiência com desenvolvimento de APIs Rest, gerenciamento de bancos de dados e a aplicação de metodologias ágeis, como Scrum/Kanban. Meu principal foco é entregar valor ao cliente, transformando ideias em soluções eficazes através de um bom código.",
+        "button": "Entre em contato",
+        "rolar": "Rolar para baixo"
+    },
+    "Projects": {
+        "title": "Meus Projetos",
+        "description": "Confira abaixo alguns projetos que desenvolvi na minha trajetória como desenvolvedor.",
+        "p": "TODOS"
+    },
+    "Card": {
+        "name": "Meus Projetos",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio aperiam a labore accusantium sed nisi impedit tempore, veritatis voluptatem eaque repellat qui quos voluptas ipsum similique in esse laboriosam fuga."
+    },
+    "Experience": {
+        "text": "Competências"
+    },
+    "Contact": {
+        "h1": "Contate-me",
+        "p": "Entre em contato comigo",
+        "subtitle1": "Fale comigo",
+        "subtitle2": "Descreva seu interesse",
+        "writeMe": "Enviar uma mensagem",
+        "whatsapp": "Conversar no Whatsapp",
+        "linkedin": "Conectar ao Linkedin"
+    },
+    "Footer": {
+        "p1": "2025 © Eduardo Eckert Sperfeld - Todos os direitos Reservados.",
+        "p2": "Desenvolvido com Next, TailwindCSS, React Icons e Shadcn.ui"
+    },
+    "Form": {
+        "name": "Nome",
+        "name-placeholder": "Seu nome completo",
+        "email": "E-mail",
+        "email-placeholder": "Seu melhor e-mail",
+        "message": "Mensagem",
+        "message-placeholder": "Escreva sua mensagem aqui...",
+        "button": "Enviar Mensagem",
+        "toast-success-title": "Mensagem enviada!",
+        "toast-success-description": "Obrigado por entrar em contato. Responderei em breve!",
+        "toast-error-title": "Erro ao enviar",
+        "toast-error-description": "Ocorreu um erro ao enviar a mensagem. Tente novamente."
+    },
+    "Skills": {
+        "title": "Habilidades"
+    },
+    "EducationExperience": {
+        "title": "Qualificações",
+        "education": "Educação",
+        "experience": "Experiência",
+        "education-title": "Experiências Educacionais",
+        "education-description": "Aqui estão algumas das minhas experiências educacionais, onde adquiri conhecimento e habilidades.",
+        "experience-title": "Experiências Profissionais",
+        "experience-description": "Aqui estão algumas das minhas experiências profissionais. Estou sempre aberto a novos desafios e projetos. Vamos trabalhar juntos para criar soluções incríveis!"
+    }
+}

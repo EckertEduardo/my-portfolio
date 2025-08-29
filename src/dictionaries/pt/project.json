@@ -1,0 +1,20 @@
+[
+    {
+        "image": "projects/SignSafe.png",
+        "title": "Web App para controle e gerenciamento de usuários autenticados",
+        "description": "SignSafe é um aplicativo web seguro para gerenciamento de usuários. Ele permite que os usuários se registrem, façam login, atualizem perfis e excluam contas, garantindo a segurança com recursos como verificação de e-mail e redefinição de senha baseada em OTP.",
+        "technologies": [
+            "C#",
+            ".NET",
+            "Microsoft Sql Server",
+            "CQRS",
+            "Docker",
+            "OTP",
+            "JWT",
+            "Serilog",
+            "RESTful"
+        ],
+        "githubUrl": "",
+        "type": "backend"
+    }
+]
