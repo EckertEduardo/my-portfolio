@@ -5,14 +5,15 @@ import { EducationExperience } from "./pages/education-experience";
 import HeroSection from "./pages/hero-section";
 import { ProjectsSection } from "./pages/projects";
 import SkillsSection from "./pages/skills-section";
+import ScrollToTopButton from "@/components/ui/scrollToTopButton";
 
 
 export default async function Home({
-  params,
+    params,
 }: {
-  params: Promise<{ locale: string }>;
+    params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
+    const { locale } = await params;
     return (
         <div>
             <Navbar />
@@ -34,6 +35,8 @@ export default async function Home({
             <div className="footer">
                 <Footer />
             </div>
+
+            <ScrollToTopButton />
         </div>
     );
 }

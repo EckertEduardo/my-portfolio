@@ -47,7 +47,6 @@ export default function Navbar() {
         setIsClick(!isClick);
     };
 
-    const locale = useLocale(); // locale atual da rota
     const UnderlineLink: React.FC<UnderlineLinkProps> = ({
         href,
         children,
@@ -67,7 +66,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="bg-white dark:bg-black border-b border-gray-200 dark:border-gray-700 w-full">
+        <nav className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-black border-b border-gray-200 dark:border-gray-700">
             <div>
                 <nav className="bg-white dark:bg-black">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 pg:px-8">
@@ -115,7 +114,7 @@ export default function Navbar() {
                                     </div>
                                 </label>
 
-                                <LanguageToggle/>
+                                <LanguageToggle />
                             </div>
                         </div>
                     </div>

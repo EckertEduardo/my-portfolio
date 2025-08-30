@@ -25,6 +25,15 @@ body {
   border-radius: 1px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+:target {
+  scroll-margin-top: 3rem;
+}
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;
