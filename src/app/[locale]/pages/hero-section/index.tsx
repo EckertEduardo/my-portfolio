@@ -5,7 +5,6 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 import { TbBrandGithub, TbBrandGmail, TbBrandLinkedin, TbBrandWhatsapp } from "react-icons/tb";
 import { useTranslations } from 'next-intl'
 import { FaRegArrowAltCircleDown } from "react-icons/fa";
-import { BiMouse } from "react-icons/bi";
 
 const contacts = [
     {

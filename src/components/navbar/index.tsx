@@ -58,7 +58,7 @@ export default function Navbar() {
                 className={`relative text-black dark:text-white p-2 
                   after:content-[''] after:block after:w-full after:h-[2px] 
                   after:bg-purple-800 after:scale-x-0 after:transition-transform 
-                  after:duration-300 after:origin-left hover:after:scale-x-100 ${className}`}
+                  after:duration-300 after:origin-left hover:after:scale-x-100 transform transition-transform duration-300 hover:scale-105 ${className}`}
             >
                 {children}
             </a>
@@ -71,9 +71,13 @@ export default function Navbar() {
                 <nav className="bg-white dark:bg-black">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 pg:px-8">
                         <div className="flex items-center justify-between h-20">
-                            <div className="flex items-center space-x-8">
-                                <a href="/">
-                                    <Image className='w-10 h-10' src={logo} alt="Logo" />
+                            <div className="flex items-center space-x-3">
+                                <a href="/" className="flex items-center gap-1 transform transition-transform duration-300 hover:scale-105">
+                                    <Image className="w-10 h-10" src={logo} alt="Logo" />
+                                    <span className="italic text-sm text-gray-600 dark:text-white leading-[0.9]">
+                                        <span className="block">ECKERT</span>
+                                        <span className="block">SPERFELD</span>
+                                    </span>
                                 </a>
                             </div>
                             <div className='hidden md:block'>
@@ -106,11 +110,11 @@ export default function Navbar() {
                                         onChange={toggleTheme}
                                     />
                                     <div className="peer after:bg-[length:12px_12px] after:bg-no-repeat after:bg-center after:bg-[url('/moon.svg')] 
-                                peer-checked:after:bg-[url('/sun.svg')] after:transition-all after:duration-300 after:left-0 
-                                peer-checked:after:left-7 w-14 h-7 bg-zinc-300 dark:bg-zinc-700 rounded-full px-1 flex
-                                items-center after:rounded-full after:content-[''] after:flex after:relative after:w-5 after:h-5
-                                after:bg-zinc-100 dark:after:bg-zinc-800 after:rotate-0 after:peer-checked:rotate-180 shadow-inner
-                                after:animate-moon peer-checked:after:animate-sun">
+                                    peer-checked:after:bg-[url('/sun.svg')] after:transition-all after:duration-300 after:left-0 
+                                    peer-checked:after:left-7 w-14 h-7 bg-zinc-300 dark:bg-zinc-700 rounded-full px-1 flex
+                                    items-center after:rounded-full after:content-[''] after:flex after:relative after:w-5 after:h-5
+                                    after:bg-zinc-100 dark:after:bg-zinc-800 after:rotate-0 after:peer-checked:rotate-180 shadow-inner
+                                    after:animate-moon peer-checked:after:animate-sun transform transition-transform duration-300 hover:scale-105">
                                     </div>
                                 </label>
 

@@ -29,9 +29,9 @@ export function LanguageToggle() {
     }
 
     return (
-        <DropdownMenu>
+        <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="lIcon" className="p-0 pointer">
+                <Button variant="outline" size="lIcon" className="p-0 pointer transform transition-transform duration-300 hover:scale-105 hover:bg-gray-200 dark:hover:bg-gray-800">
                     <ReactCountryFlag
                         countryCode={getFlagCode(locale)}
                         svg
@@ -41,14 +41,14 @@ export function LanguageToggle() {
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-                <DropdownMenuItem>
-                    <Link href={pathname} locale="pt" className="flex items-center gap-2 w-full px-3">
+                <DropdownMenuItem className="hover:bg-gray-200 dark:hover:bg-gray-800 hover:bg-gray-200 rounded-md">
+                    <Link href={pathname} locale="pt" className="flex items-center gap-2 w-full  px-1.5 py-1.5 transition-transform duration-300 hover:scale-105 ">
                         <ReactCountryFlag countryCode="BR" svg style={{ width: "1.2em", height: "1.2em" }} />
                         Português
                     </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem>
-                    <Link href={pathname} locale="en" className="flex items-center gap-2 w-full px-3">
+                <DropdownMenuItem className="hover:bg-gray-200 dark:hover:bg-gray-800 hover:bg-gray-200 rounded-md">
+                    <Link href={pathname} locale="en" className="flex items-center gap-2 w-full  px-1.5 py-1.5 transition-transform duration-300 hover:scale-105">
                         <ReactCountryFlag countryCode="US" svg style={{ width: "1.2em", height: "1.2em" }} />
                         English
                     </Link>

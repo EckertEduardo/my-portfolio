@@ -8,12 +8,7 @@ import SkillsSection from "./pages/skills-section";
 import ScrollToTopButton from "@/components/ui/scrollToTopButton";
 
 
-export default async function Home({
-    params,
-}: {
-    params: Promise<{ locale: string }>;
-}) {
-    const { locale } = await params;
+export default async function Home() {
     return (
         <div>
             <Navbar />
