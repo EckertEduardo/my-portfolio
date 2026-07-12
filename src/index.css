@@ -1,0 +1,284 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+}
+
+:root {
+  --bg: #f7f7f5;
+  --bg-elevated: #ffffff;
+  --bg-elevated-2: #ffffff;
+  --text: #47474f;
+  --text-h: #0a0a0d;
+  --text-muted: #63636e;
+  --border: #e2e2e0;
+  --border-strong: #cfcfcd;
+  --code-bg: #eeeeec;
+  --accent: #5b4dee;
+  --accent-2: #0ea5a4;
+  --accent-3: #ec4899;
+  --accent-bg: rgba(91, 77, 238, 0.08);
+  --accent-border: rgba(91, 77, 238, 0.35);
+  --glow-1: rgba(91, 77, 238, 0.16);
+  --glow-2: rgba(14, 165, 164, 0.14);
+  --shadow:
+    rgba(20, 20, 25, 0.08) 0 20px 40px -12px, rgba(20, 20, 25, 0.06) 0 8px 16px -8px;
+  --shadow-glow: 0 0 0 1px var(--accent-border), 0 20px 40px -16px var(--glow-1);
+  --grid-line: rgba(10, 10, 13, 0.045);
+  --noise-opacity: 0.025;
+}
+
+:root.dark {
+  --bg: #08080b;
+  --bg-elevated: #101014;
+  --bg-elevated-2: #16161c;
+  --text: #a4a4b0;
+  --text-h: #f7f7fa;
+  --text-muted: #6e6e7c;
+  --border: #232329;
+  --border-strong: #34343d;
+  --code-bg: #1a1a20;
+  --accent: #9089fc;
+  --accent-2: #2dd4bf;
+  --accent-3: #f472b6;
+  --accent-bg: rgba(144, 137, 252, 0.12);
+  --accent-border: rgba(144, 137, 252, 0.4);
+  --glow-1: rgba(144, 137, 252, 0.22);
+  --glow-2: rgba(45, 212, 191, 0.16);
+  --shadow:
+    rgba(0, 0, 0, 0.6) 0 20px 40px -12px, rgba(0, 0, 0, 0.4) 0 8px 16px -8px;
+  --shadow-glow: 0 0 0 1px var(--accent-border), 0 24px 48px -16px var(--glow-1);
+  --grid-line: rgba(255, 255, 255, 0.045);
+  --noise-opacity: 0.04;
+}
+
+/*
+  Base element resets live in @layer base so Tailwind utility classes
+  (which Tailwind v4 also emits into its own layers) can always override
+  them. Unlayered CSS beats layered CSS regardless of specificity, so
+  without this, e.g. `mb-5` on an `<h3>` would lose to a plain `h3 { margin: 0 }`.
+*/
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    color: var(--text-h);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .mono {
+    font-family: var(--font-mono);
+  }
+
+  code {
+    background: var(--code-bg);
+    color: var(--accent);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.85em;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: white;
+  }
+}
+
+@layer components {
+  /* ---------- Fixed backdrop: gradient blobs + grid + noise ---------- */
+
+  .backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .backdrop::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+  }
+
+  .backdrop::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: var(--noise-opacity);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+  }
+
+  .blob {
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(90px);
+    opacity: 0.9;
+  }
+
+  .blob-1 {
+    top: -10%;
+    left: 8%;
+    width: 480px;
+    height: 480px;
+    background: var(--glow-1);
+  }
+
+  .blob-2 {
+    top: 10%;
+    right: 4%;
+    width: 420px;
+    height: 420px;
+    background: var(--glow-2);
+  }
+
+  .blob-3 {
+    bottom: -10%;
+    left: 30%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--glow-1), transparent 70%);
+  }
+
+  /* ---------- Reusable UI classes ---------- */
+
+  .text-gradient {
+    background: linear-gradient(100deg, var(--accent) 10%, var(--accent-2) 60%, var(--accent-3) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .glass {
+    background: color-mix(in srgb, var(--bg-elevated) 70%, transparent);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    transition: border-color 0.3s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+    will-change: transform;
+  }
+
+  .card:hover {
+    border-color: var(--accent-border);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-6px);
+  }
+
+  .btn-primary {
+    background: linear-gradient(100deg, var(--accent), var(--accent-2));
+    background-size: 160% 160%;
+    background-position: 0% 50%;
+    color: white;
+    box-shadow: 0 8px 24px -8px var(--glow-1);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, background-position 0.5s ease;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 16px 36px -10px var(--glow-1);
+    background-position: 100% 50%;
+  }
+
+  .btn-primary:active {
+    transform: translateY(-1px) scale(0.99);
+  }
+
+  .btn-ghost {
+    border: 1px solid var(--border-strong);
+    color: var(--text-h);
+    transition: border-color 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--accent-border);
+    background: var(--accent-bg);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px -12px var(--glow-1);
+  }
+
+  .tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 999px;
+    padding: 4px 12px;
+    display: inline-block;
+    transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .tag:hover {
+    border-color: var(--accent-border);
+    color: var(--accent);
+    background: var(--accent-bg);
+    transform: translateY(-2px) scale(1.04);
+  }
+
+  /* ---------- Underline-on-hover for inline text links ---------- */
+
+  .link-underline {
+    position: relative;
+  }
+
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .link-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  /* ---------- Icon buttons (lang / theme / social) ---------- */
+
+  .icon-btn {
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+}

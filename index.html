@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#5b4dee" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var dark = stored === 'dark' || (stored !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+    <meta name="description" content="Eduardo Eckert Sperfeld — Engenheiro de Software Sênior focado em backend, .NET, Golang e sistemas distribuídos." />
+    <title>Eduardo Eckert Sperfeld — Engenheiro de Software Sênior</title>
+    <!-- TODO: replace REPLACE-WITH-YOUR-DOMAIN.com with the real production domain once deployed -->
+    <link rel="canonical" href="https://REPLACE-WITH-YOUR-DOMAIN.com/" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Eduardo Eckert Sperfeld" />
+    <meta property="og:title" content="Eduardo Eckert Sperfeld — Engenheiro de Software Sênior" />
+    <meta property="og:description" content="Backend, .NET, Golang e sistemas distribuídos. Atualmente no Mercado Livre, arquitetando serviços para e-commerce e fintech." />
+    <meta property="og:image" content="https://REPLACE-WITH-YOUR-DOMAIN.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://REPLACE-WITH-YOUR-DOMAIN.com/" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Eduardo Eckert Sperfeld — Engenheiro de Software Sênior" />
+    <meta name="twitter:description" content="Backend, .NET, Golang e sistemas distribuídos. Atualmente no Mercado Livre, arquitetando serviços para e-commerce e fintech." />
+    <meta name="twitter:image" content="https://REPLACE-WITH-YOUR-DOMAIN.com/og-image.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Eduardo Eckert Sperfeld",
+        "jobTitle": "Senior Software Engineer",
+        "url": "https://REPLACE-WITH-YOUR-DOMAIN.com/",
+        "image": "https://REPLACE-WITH-YOUR-DOMAIN.com/images/eduardo.jpg",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Mercado Livre"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Blumenau",
+          "addressRegion": "SC",
+          "addressCountry": "BR"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/eduardo-eckert-sperfeld/",
+          "https://github.com/EckertEduardo"
+        ]
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
