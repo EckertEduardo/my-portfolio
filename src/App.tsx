@@ -5,6 +5,7 @@ import { Backdrop } from './components/Backdrop'
 import { BackToTop } from './components/BackToTop'
 import { Home } from './pages/Home'
 import { Blog } from './pages/Blog'
+import { NotFound } from './pages/NotFound'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />
