@@ -22,7 +22,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-[var(--border)] mt-16">
-      <div className="mx-auto max-w-5xl px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="mx-auto max-w-5xl px-6 pt-10 pb-20 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-sm text-[var(--text-muted)]">
           © {year} <span className="font-display font-semibold text-gradient">Eduardo Eckert Sperfeld</span>. {t.footer.rights}
         </p>
@@ -66,7 +66,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <p className="text-center text-xs text-[var(--text-muted)] pb-6 font-mono">{t.footer.builtWith}</p>
     </footer>
   )
 }

@@ -85,17 +85,12 @@ export function Header() {
                 className="relative px-3 py-1.5 rounded-full transition-all duration-300 cursor-pointer hover:-translate-y-0.5"
                 style={{ color: isActive ? 'var(--accent)' : 'var(--text)' }}
               >
-                {isActive ? (
+                {isActive && (
                   <motion.span
                     layoutId="nav-pill"
                     className="absolute inset-0 rounded-full -z-10"
                     style={{ background: 'var(--accent-bg)' }}
                     transition={{ type: 'spring', stiffness: 400, damping: 32 }}
-                  />
-                ) : (
-                  <span
-                    className="absolute inset-0 rounded-full -z-10 opacity-0 hover:opacity-100 transition-opacity duration-300"
-                    style={{ background: 'var(--accent-bg)' }}
                   />
                 )}
                 {t.nav[item.key]}

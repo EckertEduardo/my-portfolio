@@ -102,7 +102,6 @@ export interface ContentShape {
   }
   footer: {
     rights: string
-    builtWith: string
   }
   notFound: {
     heading: string
@@ -327,7 +326,6 @@ const pt: ContentShape = {
   },
   footer: {
     rights: 'Todos os direitos reservados.',
-    builtWith: 'Construído com React, TypeScript e Tailwind CSS.',
   },
   notFound: {
     heading: 'Página não encontrada',
@@ -550,7 +548,6 @@ const en: ContentShape = {
   },
   footer: {
     rights: 'All rights reserved.',
-    builtWith: 'Built with React, TypeScript and Tailwind CSS.',
   },
   notFound: {
     heading: 'Page not found',
