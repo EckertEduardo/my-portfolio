@@ -21,7 +21,14 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const root = window.document.documentElement
-    root.classList.toggle('dark', theme === 'dark')
+    const applyTheme = () => root.classList.toggle('dark', theme === 'dark')
+
+    if (document.startViewTransition) {
+      document.startViewTransition(applyTheme)
+    } else {
+      applyTheme()
+    }
+
     window.localStorage.setItem('theme', theme)
   }, [theme])
 

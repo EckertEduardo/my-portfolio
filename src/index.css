@@ -54,6 +54,21 @@
   --noise-opacity: 0.04;
 }
 
+/* Theme switch: cross-fade the whole page as one atomic snapshot instead of
+   letting every themed element animate its own colors independently. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.32s;
+  animation-timing-function: ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
+}
+
 /*
   Base element resets live in @layer base so Tailwind utility classes
   (which Tailwind v4 also emits into its own layers) can always override

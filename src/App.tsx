@@ -1,11 +1,13 @@
+import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { Backdrop } from './components/Backdrop'
 import { BackToTop } from './components/BackToTop'
 import { Home } from './pages/Home'
-import { Blog } from './pages/Blog'
-import { NotFound } from './pages/NotFound'
+
+const Blog = lazy(() => import('./pages/Blog').then((m) => ({ default: m.Blog })))
+const NotFound = lazy(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })))
 
 function App() {
   return (
@@ -13,11 +15,13 @@ function App() {
       <Backdrop />
       <Header />
       <main className="flex-1">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </main>
       <Footer />
       <BackToTop />
