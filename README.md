@@ -2,7 +2,7 @@
 
 Portfólio pessoal de **Eduardo Eckert Sperfeld** — Software Engineer (.NET, Golang & Sistemas Distribuídos).
 
-🔗 [my-portfolio-eckertdev.vercel.app](https://my-portfolio-eckertdev.vercel.app/)
+🔗 [eckert-dev-my-portfolio.vercel.app](https://eckert-dev-my-portfolio.vercel.app/)
 
 ## Sobre
 

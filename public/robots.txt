@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://my-portfolio-eckertdev.vercel.app/sitemap.xml
+Sitemap: https://eckert-dev-my-portfolio.vercel.app/sitemap.xml
