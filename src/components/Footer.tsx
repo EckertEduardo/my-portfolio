@@ -24,7 +24,7 @@ export function Footer() {
     <footer className="border-t border-[var(--border)] mt-16">
       <div className="mx-auto max-w-5xl px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-sm text-[var(--text-muted)]">
-          © {year} Eduardo Eckert Sperfeld. {t.footer.rights}
+          © {year} <span className="font-display font-semibold text-gradient">Eduardo Eckert Sperfeld</span>. {t.footer.rights}
         </p>
         <div className="flex items-center gap-3">
           <a
