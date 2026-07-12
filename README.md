@@ -2,7 +2,7 @@
 
 Portfólio pessoal de **Eduardo Eckert Sperfeld** — Software Engineer (.NET, Golang & Sistemas Distribuídos).
 
-🔗 [eckert.dev](https://eckert.dev) *(atualize com a URL final de deploy)*
+🔗 [my-portfolio-eckertdev.vercel.app](https://my-portfolio-eckertdev.vercel.app/)
 
 ## Sobre
 
@@ -41,7 +41,7 @@ npm run lint      # lint com Oxlint
 
 ## Deploy
 
-Projeto estático (Vite SPA), pronto para deploy na [Vercel](https://vercel.com/).
+Projeto estático (Vite SPA) hospedado na [Vercel](https://vercel.com/).
 
 ## Licença
 
