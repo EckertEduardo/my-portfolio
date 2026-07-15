@@ -200,15 +200,15 @@ const pt: ContentShape = {
     viewMore: 'Ver mais no GitHub',
     items: [
       {
-        name: 'Ementa Entra21 · C# Developer Essentials',
-        summary: 'Site com a ementa do curso que leciono no Entra21 (Senac), 320h de C#/.NET.',
+        name: 'Mentoria Individual — C# & .NET',
+        summary: 'Site de apresentação da minha mentoria particular de C#/.NET, com aula gratuita e trilha completa de aprendizado.',
         problem:
-          'Alunos do Entra21 precisavam de uma forma clara de acompanhar os módulos e aulas do curso, sem depender de PDFs ou planilhas.',
+          'Pessoas migrando de carreira pra tecnologia precisavam conhecer meu método de ensino antes de contratar uma mentoria individual.',
         solution:
-          'Site estático que renderiza a grade curricular a partir de um JSON de dados, com interface inspirada em plataformas de curso online — fácil de manter e atualizar a cada turma.',
-        result: 'Material de apoio ao vivo para as turmas do curso, usado como referência de progresso pelos alunos.',
+          'Site que libera uma aula completa gratuita e mostra a ementa inteira do curso como amostra, com uma seção de pacotes de mentoria 1:1 e contato direto via WhatsApp.',
+        result: 'Canal direto para captar e converter interessados em aulas particulares de C#/.NET.',
         stack: ['JavaScript', 'HTML', 'CSS', 'Educação'],
-        image: '/projects/entra21.jpg',
+        image: '/projects/mentoria.jpg',
         liveUrl: 'https://eckert-dev-c-sharp-demo.vercel.app/',
         featured: true,
       },
@@ -423,15 +423,15 @@ const en: ContentShape = {
     viewMore: 'View more on GitHub',
     items: [
       {
-        name: 'Entra21 · C# Developer Essentials Syllabus',
-        summary: 'Course syllabus site for the C#/.NET class I teach at Entra21 (Senac), 320h.',
+        name: '1:1 Mentorship — C# & .NET',
+        summary: 'Landing site for my private C#/.NET mentorship, with a free lesson and the full learning path on display.',
         problem:
-          'Entra21 students needed a clear way to follow the course modules and lessons, instead of relying on PDFs or spreadsheets.',
+          'People transitioning into tech needed a way to get a feel for my teaching style before committing to 1:1 mentorship.',
         solution:
-          'A static site that renders the curriculum from a JSON data file, with an interface inspired by online course platforms — easy to maintain and update for each new cohort.',
-        result: 'A live companion resource for the classes, used by students to track their progress.',
+          'A site that unlocks one full free lesson and shows the entire course outline as a preview, with a mentorship pricing section and direct WhatsApp contact.',
+        result: 'A direct channel for attracting and converting people interested in private C#/.NET lessons.',
         stack: ['JavaScript', 'HTML', 'CSS', 'Education'],
-        image: '/projects/entra21.jpg',
+        image: '/projects/mentoria.jpg',
         liveUrl: 'https://eckert-dev-c-sharp-demo.vercel.app/',
         featured: true,
       },
