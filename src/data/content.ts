@@ -8,7 +8,7 @@ export interface ExperienceItem {
 
 export interface ProjectItem {
   name: string
-  repo: string
+  repo?: string
   summary: string
   problem: string
   solution: string
@@ -161,7 +161,7 @@ const pt: ContentShape = {
           'Aulas de C#/.NET, orientação a objetos e boas práticas de desenvolvimento para alunos em transição de carreira para tecnologia.',
           'Elaboração de exercícios práticos e mentoria individual, com foco em construir fundamentos sólidos de programação.',
         ],
-        link: { label: 'Site da ementa do curso', url: 'https://eckert-dev-learning-c-sharp-with-me.vercel.app/' },
+        link: { label: 'Site da ementa do curso', url: 'https://eckert-dev-c-sharp-demo.vercel.app/' },
       },
       {
         role: 'Desenvolvedor de Software',
@@ -201,7 +201,6 @@ const pt: ContentShape = {
     items: [
       {
         name: 'Ementa Entra21 · C# Developer Essentials',
-        repo: 'learning-CSharp-with-me',
         summary: 'Site com a ementa do curso que leciono no Entra21 (Senac), 320h de C#/.NET.',
         problem:
           'Alunos do Entra21 precisavam de uma forma clara de acompanhar os módulos e aulas do curso, sem depender de PDFs ou planilhas.',
@@ -210,7 +209,7 @@ const pt: ContentShape = {
         result: 'Material de apoio ao vivo para as turmas do curso, usado como referência de progresso pelos alunos.',
         stack: ['JavaScript', 'HTML', 'CSS', 'Educação'],
         image: '/projects/entra21.jpg',
-        liveUrl: 'https://eckert-dev-learning-c-sharp-with-me.vercel.app/',
+        liveUrl: 'https://eckert-dev-c-sharp-demo.vercel.app/',
         featured: true,
       },
       {
@@ -385,7 +384,7 @@ const en: ContentShape = {
           'Lectures on C#/.NET, object-oriented design and development best practices for students transitioning into tech.',
           'Building hands-on exercises and 1:1 mentoring focused on solid programming fundamentals.',
         ],
-        link: { label: 'Course syllabus site', url: 'https://eckert-dev-learning-c-sharp-with-me.vercel.app/' },
+        link: { label: 'Course syllabus site', url: 'https://eckert-dev-c-sharp-demo.vercel.app/' },
       },
       {
         role: 'Software Developer',
@@ -425,7 +424,6 @@ const en: ContentShape = {
     items: [
       {
         name: 'Entra21 · C# Developer Essentials Syllabus',
-        repo: 'learning-CSharp-with-me',
         summary: 'Course syllabus site for the C#/.NET class I teach at Entra21 (Senac), 320h.',
         problem:
           'Entra21 students needed a clear way to follow the course modules and lessons, instead of relying on PDFs or spreadsheets.',
@@ -434,7 +432,7 @@ const en: ContentShape = {
         result: 'A live companion resource for the classes, used by students to track their progress.',
         stack: ['JavaScript', 'HTML', 'CSS', 'Education'],
         image: '/projects/entra21.jpg',
-        liveUrl: 'https://eckert-dev-learning-c-sharp-with-me.vercel.app/',
+        liveUrl: 'https://eckert-dev-c-sharp-demo.vercel.app/',
         featured: true,
       },
       {

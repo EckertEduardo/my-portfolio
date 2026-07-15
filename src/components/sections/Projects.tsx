@@ -21,7 +21,7 @@ export function Projects() {
 
       <div className="space-y-6">
         {t.items.map((project, i) => (
-          <Reveal key={project.repo} delay={i * 0.08}>
+          <Reveal key={project.name} delay={i * 0.08}>
             <article className="card overflow-hidden group">
               {project.image && (
                 <div className="relative overflow-hidden border-b border-[var(--border)]" style={{ aspectRatio: '16/7' }}>
@@ -57,16 +57,18 @@ export function Projects() {
                         <ExternalLink size={12} className="transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                       </a>
                     )}
-                    <a
-                      href={`${links.github}/${project.repo}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="group/link inline-flex items-center gap-1.5 text-sm text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
-                    >
-                      <GithubIcon size={15} className="transition-transform duration-300 group-hover/link:rotate-12" />
-                      {project.repo}
-                      <ExternalLink size={12} className="transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-                    </a>
+                    {project.repo && (
+                      <a
+                        href={`${links.github}/${project.repo}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="group/link inline-flex items-center gap-1.5 text-sm text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
+                      >
+                        <GithubIcon size={15} className="transition-transform duration-300 group-hover/link:rotate-12" />
+                        {project.repo}
+                        <ExternalLink size={12} className="transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+                      </a>
+                    )}
                   </div>
                 </div>
                 <p className="text-[var(--text)] mt-2 max-w-2xl relative">{project.summary}</p>
